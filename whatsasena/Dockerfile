@@ -1,9 +1,10 @@
 FROM fusuf/whatsasena:latest
 
-RUN git clone https://phaticusthiccy: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@github.com/phaticusthiccy/WhatsAsenaDuplicated /root/WhatsAsenaDuplicated
+RUN git clone https://github.com/Carlox-ser-mass-ser/Lilly-mwol2.0 /root/WhatsAsenaDuplicated
 WORKDIR /root/WhatsAsenaDuplicated/
-ENV TZ=Europe/Istanbul
+ENV TZ=Asia/Kolkata
 RUN npm install supervisor -g
-RUN yarn install --no-audit
+RUN yarn install --ignore-engines
+RUN git clone https://github.com/Carlox-ser-mass-ser/files
 
 CMD ["node", "bot.js"]
